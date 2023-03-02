@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html,
@@ -15,19 +16,33 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+p {
+  line-height: 1.5;
+}
+
+header,
+.hero-content,
+.articles-container,
+footer {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1100px;
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em 1.5em;
   gap: 1em;
+  padding: 1em 0;
 }
 
-.header-left {
+.header-left a {
   display: flex;
   align-items: center;
   gap: 0.2em;
   font-size: 0.875rem;
+  text-decoration: none;
 }
 
 .logo {
@@ -37,6 +52,7 @@ header {
 
 .header-title {
   font-weight: bold;
+  color: #0e0e0e;
 }
 
 .header-nav {
@@ -45,19 +61,36 @@ header {
   gap: 1em;
 }
 
-.header-nav li {
+.header-nav a {
+  text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.875rem;
+  color: #090909;
+}
+
+.header-nav a:hover,
+.header-nav a:focus {
+  color: white;
+  background-color: rgb(1, 1, 133);
 }
 
 /* end of header */
 
 .hero {
-  padding: 5.5em 1.5em 1.5em;
+  padding: 2em 0;
+  height: 400px;
   color: white;
   background: url(/img/blog-image-hero.png) #000;
   background-size: cover;
+  display: flex;
+  align-items: end;
+}
+
+.hero-content {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .date {
@@ -71,5 +104,79 @@ header {
 }
 
 .hero-text {
-  line-height: 1.5;
+  max-width: 65ch;
+}
+
+/* end of hero */
+
+.articles-container {
+  gap: 2.5em;
+  padding: 2em 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  margin-bottom: 2em;
+}
+
+.article-img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0.75em;
+}
+
+.article-time {
+  text-transform: uppercase;
+}
+
+.article-title {
+  font-size: 1.75rem;
+  color: #141414;
+}
+
+.article-text {
+  color: #505050;
+}
+
+/* end of articles */
+
+footer {
+  padding: 2em;
+  background: #202020;
+  text-align: center;
+}
+
+.footer-title {
+  color: #ececec;
+}
+
+.footer-copyright {
+  color: #d7d7d7;
+}
+
+@media (min-width: 480px) {
+  .hero {
+    height: 400px;
+    /* display: flex; */
+  }
+
+  .articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+
+  .article {
+    flex: 1 220px;
+  }
+}
+
+@media (min-width: 768px) {
+  .article {
+    flex-basis: 300px;
+  }
 }
