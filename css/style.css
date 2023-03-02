@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 1.5em;
+  gap: 1em;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  font-size: 0.875rem;
+}
+
+.logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.header-title {
+  font-weight: bold;
+}
+
+.header-nav {
+  display: flex;
+  list-style-type: none;
+  gap: 1em;
+}
+
+.header-nav li {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* end of header */
+
+.hero {
+  padding: 5.5em 1.5em 1.5em;
+  color: white;
+  background: url(/img/blog-image-hero.png) #000;
+  background-size: cover;
+}
+
+.date {
+  margin: 0;
+  font-size: 1em;
+}
+
+.hero-title {
+  font-size: 2rem;
+  margin: 0.2em 0 0.2em;
+}
+
+.hero-text {
+  line-height: 1.5;
+}
