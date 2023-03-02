@@ -1,0 +1,55 @@
+.about-hero,
+.about-me {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-hero {
+  padding: 2em 0;
+  display: flex;
+  gap: 1em;
+}
+
+.about-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25em;
+}
+
+/* end of section 1 */
+
+.section-text {
+  margin-bottom: 1.5em;
+}
+
+/* end of section 2 */
+.recent-posts {
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+  .about-me {
+    width: 80%;
+  }
+  .recent-posts {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-hero {
+    flex-direction: row;
+  }
+  .recent-posts {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
