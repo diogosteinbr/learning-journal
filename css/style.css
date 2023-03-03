@@ -10,6 +10,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background: #fafafa;
 }
 
 body {
@@ -22,8 +23,7 @@ p {
 
 header,
 .hero-content,
-.articles-container,
-footer {
+.articles-container {
   margin: 0 auto;
   width: 90%;
   max-width: 1100px;
@@ -119,6 +119,7 @@ header {
 article {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.25em;
   margin-bottom: 2em;
 }
@@ -142,15 +143,10 @@ article {
   color: #505050;
 }
 
-.btn {
-  display: inline;
-  padding: 0.5em 0;
-}
-
 .btn:hover,
 .btn:focus {
-  color: white;
-  background-color: rgb(1, 1, 133);
+  color: rgb(1, 1, 133);
+  font-weight: bold;
 }
 
 /* end of articles */
